@@ -20,19 +20,6 @@ var dsplay_media = {
     // customMediaParam: "value",
 
     duration: 30000,
-};
-
-var dsplay_template = {
-    // template parameter
-    // template_var: "My Template Var",
-    // logo: "../test-assets/dsplay-logo.png",
-    // title: "My Super Template",
-    // expanded: "false",
-
-    primaryColor: '',
-    secondaryColor: '',
-    lineColor: '',
-    logoPicture: './dsplayLogo.png',
     airlineInformation: {
         airportName: 'Fernando de Noronha',
         lastUpdate: '2024-01-01T03:30',
@@ -256,4 +243,17 @@ var dsplay_template = {
             },
         ],
     },
+};
+
+var dsplay_template = {
+    // template parameter
+    // template_var: "My Template Var",
+    // logo: "../test-assets/dsplay-logo.png",
+    // title: "My Super Template",
+    // expanded: "false",
+
+    primaryColor: '',
+    secondaryColor: '',
+    lineColor: '',
+    logoPicture: './dsplayLogo.png',
 };

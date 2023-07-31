@@ -1,5 +1,10 @@
 import { I18nextProvider } from 'react-i18next';
-import { Loader, useScreenInfo, useTemplateVal } from '@dsplay/react-template-utils';
+import {
+  Loader,
+  useScreenInfo,
+  useTemplateVal,
+  useMedia,
+} from '@dsplay/react-template-utils';
 import Intro from '../intro';
 import Main from '../main';
 import i18n from '../../i18n';
@@ -32,7 +37,8 @@ function App() {
 
   // images to preload
   const logoPicture = useTemplateVal('logoPicture', '');
-  const airlineInformation = useTemplateVal('airlineInformation', '');
+  const media = useMedia();
+  const { airlineInformation } = media;
 
   const images = [
     airlineInformation.planePicture,

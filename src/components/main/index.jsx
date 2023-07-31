@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import './style.sass';
 import { format, parseISO } from 'date-fns';
-import { useTemplateVal } from '@dsplay/react-template-utils';
+import { useTemplateVal, useMedia } from '@dsplay/react-template-utils';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../../contexts/themeContext';
 
@@ -9,7 +9,8 @@ function Main() {
   const { globalTheme } = useContext(ThemeContext);
 
   const logoPicture = useTemplateVal('logoPicture', '');
-  const airlineInformation = useTemplateVal('airlineInformation', '');
+  const media = useMedia();
+  const { airlineInformation } = media;
   const viewWidth = window.innerWidth;
   const { t } = useTranslation();
 
