@@ -90,7 +90,7 @@ function Main() {
                       />
                     </td>
                     <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>
-                      {format(parseISO(flight.departureTime), 'HH:mm a')}
+                      {format(parseISO(flight.time), 'HH:mm a')}
                     </td>
                     <td>{flight.gate}</td>
                     <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>{flight.status}</td>
