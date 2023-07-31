@@ -21,17 +21,11 @@ This template has some configuration variables as the following table shows:
 
 | Variable              | Type    | Default    | Description                                        |
 |-----------------------|---------|------------| ---------------------------------------------------|
-| `theme`            | object   | { primaryColor, secondaryColor, lineColor }       | template colors                                  |
-| `logoPicture` | text   | "https://www.urlExample.com" | logo picture |
-| `aiirlineInformation`          | object   | { airportName, lastUpdate, departureOrArrivals, planePicture, logoPicure, flights }    | arline information and flight list    |
-
-Theme {...}
-| Variable              | Type    | Default    | Description                                        |
-|-----------------------|---------|------------| ---------------------------------------------------|
 | `primaryColor`        | text   | ""    | primary color    |
 | `secondaryColor`        | text   | ""    | secondary color    |
 | `lineColor`        | text   | ""    | line color    |
-
+| `logoPicture` | text   | "https://www.urlExample.com" | logo picture |
+| `aiirlineInformation`          | object   | { airportName, lastUpdate, departureOrArrivals, planePicture, logoPicure, flights }    | arline information and flight list    |
 
 Airline information [...]
 |Attributes             | Type    | Example    | Description                                        |

@@ -29,11 +29,9 @@ var dsplay_template = {
     // title: "My Super Template",
     // expanded: "false",
 
-    theme: {
-        primaryColor: '',
-        secondaryColor: '',
-        lineColor: '',
-    },
+    primaryColor: '',
+    secondaryColor: '',
+    lineColor: '',
     logoPicture: './dsplayLogo.png',
     airlineInformation: {
         airportName: 'Fernando de Noronha',

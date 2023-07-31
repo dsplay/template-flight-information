@@ -13,18 +13,20 @@ export const ThemeContext = createContext({
 });
 
 const ThemeContextParent = (props) => {
-  const theme = useTemplateVal('theme', '');
+  let primaryColor = useTemplateVal('primaryColor', '');
+  let secondaryColor = useTemplateVal('secondaryColor', '');
+  let lineColor = useTemplateVal('lineColor', '');
 
-  if (!theme.primaryColor) {
-    theme.primaryColor = '#008c9e';
+  if (!primaryColor) {
+    primaryColor = '#008c9e';
   }
 
-  if (!theme.secondaryColor) {
-    theme.secondaryColor = '#005f6b';
+  if (!secondaryColor) {
+    secondaryColor = '#005f6b';
   }
 
-  if (!theme.lineColor) {
-    theme.lineColor = '#cecece';
+  if (!lineColor) {
+    lineColor = '#cecece';
   }
 
   // const theme = activeTheme;
@@ -32,9 +34,9 @@ const ThemeContextParent = (props) => {
 
   const value = {
     globalTheme: {
-      primaryColor: theme.primaryColor,
-      secondaryColor: theme.secondaryColor,
-      lineColor: theme.lineColor,
+      primaryColor,
+      secondaryColor,
+      lineColor,
     },
   };
 
