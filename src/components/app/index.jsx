@@ -5,11 +5,11 @@ import {
   useTemplateVal,
   useMedia,
 } from '@dsplay/react-template-utils';
-import Intro from '../intro';
 import Main from '../main';
 import i18n from '../../i18n';
 import './style.sass';
 import ThemeContextParent from '../../contexts/themeContext';
+import LoaderEvents from '../loader';
 
 // console.log(U, Loader)
 
@@ -51,7 +51,7 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <ThemeContextParent>
         <Loader
-          placeholder={<Intro />}
+          placeholder={<LoaderEvents />}
           fonts={fonts}
           images={images}
           minDuration={MIN_LOADING_DURATION}
