@@ -23,8 +23,8 @@ var dsplay_media = {
     airlineInformation: {
         airportName: 'Fernando de Noronha',
         lastUpdate: '2024-01-01T03:30',
-        departuresOrArrivals: 'Departures',
-        planePicture: '', // "up" or "down"
+        departuresOrArrivals: 'Chegadas', // free text
+        planePicture: 'down', // values -> "up" or "down"
         flights: [
             {
                 destination: 'Nashville',
@@ -255,5 +255,5 @@ var dsplay_template = {
     primaryColor: '',
     secondaryColor: '',
     lineColor: '',
-    logoPicture: './dsplayLogo.png',
+    logoPicture: './test-assets/dsplayLogo.png',
 };
