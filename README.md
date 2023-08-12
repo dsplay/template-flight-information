@@ -25,6 +25,8 @@ This template has some configuration variables as the following table shows:
 | `secondaryColor`        | text   | ""    | secondary color    |
 | `lineColor`        | text   | ""    | line color    |
 | `logoPicture` | text   | "https://www.urlExample.com" | logo picture |
+| `durationPerPage`        | number   | 00    | display duration per page   |
+| `itemsPerPage`        | number   | 00    | number of items per page   |
 | `aiirlineInformation`          | object   | { airportName, lastUpdate, departureOrArrivals, planePicture, logoPicure, flights }    | arline information and flight list    |
 
 Airline information [...]
@@ -33,7 +35,7 @@ Airline information [...]
 | `airportName`         | text   | "F.Noronha"    | flight list    |
 | `lastUpdate`          | text   | "2024-01-01T02:30"    | datetime, iso format    |
 | `departuresOrArrivals`| text   | "Departures"    | Departure or Arrival information    |
-| `planePicture`        | text   | "up" or "down"    | plane picture    |
+| `planePicture`        | text   | "up" or "down"    | plane picture landing or takeoff    |
 | `flights`  | list   | [{ destination, flight, airline, time, gate, status }]    | flight list and their informations    |
 
 
