@@ -4,17 +4,20 @@ import { useMedia } from '@dsplay/react-template-utils';
 
 const ItemList = ({ items }) => {
   const media = useMedia();
-  const { itemsPerPage, durationPerPage } = media;
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const { itemsPerPage, duration } = media;
 
   const [count, setCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const durationPerPage = (duration / 1000) / totalPages;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
+  // eslint-disable-next-line no-console
+  console.log(duration, totalPages, durationPerPage, currentPage, count);
   function countingTime() {
     const interval = setTimeout(() => {
       setCount((prevCount) => count + 1);

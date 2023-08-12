@@ -25,7 +25,7 @@ This template has some configuration variables as the following table shows:
 | `secondaryColor`        | text   | ""    | secondary color    |
 | `lineColor`        | text   | ""    | line color    |
 | `logoPicture` | text   | "https://www.urlExample.com" | logo picture |
-| `durationPerPage`        | number   | 00    | display duration per page   |
+| `duration`        | number   | 00    | display duration  |
 | `itemsPerPage`        | number   | 00    | number of items per page   |
 | `aiirlineInformation`          | object   | { airportName, lastUpdate, departureOrArrivals, planePicture, logoPicure, flights }    | arline information and flight list    |
 
