@@ -4,6 +4,7 @@ import { format, parseISO } from 'date-fns';
 import { useTemplateVal, useMedia } from '@dsplay/react-template-utils';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../../contexts/themeContext';
+import ItemList from '../pagination';
 
 function Main() {
   const { globalTheme } = useContext(ThemeContext);
@@ -19,6 +20,32 @@ function Main() {
   if (planePicture !== 'up' && planePicture !== 'down') {
     planePicture = 'up';
   }
+
+  const tableContent = airlineInformation.flights.map((flight, index) => {
+    const lineColor = (viewWidth < 700 || index % 2 !== 0) ? globalTheme.lineColor : '';
+
+    return (
+      <tr
+        key={flight.flight + flight.airline}
+        style={{ backgroundColor: viewWidth > 700 ? lineColor : '' }}
+      >
+        <td>{flight.destination}</td>
+        <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>{flight.flight}</td>
+        <td>
+          <img
+            src={flight.airline === '' ? './assets/earth.png' : flight.airline}
+            alt="Airline"
+            className="airline-img"
+          />
+        </td>
+        <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>
+          {format(parseISO(flight.time), 'HH:mm a')}
+        </td>
+        <td>{flight.gate}</td>
+        <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>{flight.status}</td>
+      </tr>
+    );
+  });
 
   return (
     <div className="main">
@@ -59,7 +86,7 @@ function Main() {
           )
         }
       </header>
-      <section className="table">
+      <section className="table" id="table">
         <table>
           <thead>
             <tr style={{ backgroundColor: globalTheme.secondaryColor }}>
@@ -72,33 +99,10 @@ function Main() {
             </tr>
           </thead>
           <tbody>
-            {
-              airlineInformation.flights.map((flight, index) => {
-                const lineColor = (viewWidth < 700 || index % 2 !== 0) ? globalTheme.lineColor : '';
-
-                return (
-                  <tr
-                    key={flight.flight + flight.airline}
-                    style={{ backgroundColor: viewWidth > 700 ? lineColor : '' }}
-                  >
-                    <td>{flight.destination}</td>
-                    <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>{flight.flight}</td>
-                    <td>
-                      <img
-                        src={flight.airline === '' ? './assets/earth.png' : flight.airline}
-                        alt="Airline"
-                        className="airline-img"
-                      />
-                    </td>
-                    <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>
-                      {format(parseISO(flight.time), 'HH:mm a')}
-                    </td>
-                    <td>{flight.gate}</td>
-                    <td style={{ backgroundColor: viewWidth < 700 ? lineColor : '' }}>{flight.status}</td>
-                  </tr>
-                );
-              })
-            }
+            {/* {
+              showContent
+            } */}
+            <ItemList items={tableContent} />
           </tbody>
         </table>
       </section>

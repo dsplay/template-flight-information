@@ -18,8 +18,10 @@ var dsplay_media = {
     // result: { "validity": "2018-08-13T18:22:55.238Z", "showOutdated": true, "data": {} },
     // custom media parameters
     // customMediaParam: "value",
+    // duration: 30000,
 
-    duration: 30000,
+    durationPerPage: 5,
+    itemsPerPage: 10,
     airlineInformation: {
         airportName: 'Fernando de Noronha',
         lastUpdate: '2024-01-01T03:30',
