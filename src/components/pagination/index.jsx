@@ -16,8 +16,6 @@ const ItemList = ({ items }) => {
     setCurrentPage(pageNumber);
   };
 
-  // eslint-disable-next-line no-console
-  console.log(duration, totalPages, durationPerPage, currentPage, count);
   function countingTime() {
     const interval = setTimeout(() => {
       setCount((prevCount) => count + 1);
